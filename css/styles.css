@@ -59,25 +59,30 @@
   text-decoration: underline;
 }
 
-.feature {
+.benefit {
   display: flex;
   flex-direction: column;
 }
-.feature .icon {
+.benefit .icon {
   color: #0075FF;
   font-size: 10rem;
   text-align: center;
 }
-.feature .description .title {
+.benefit .description {
+  height: 8rem;
+}
+.benefit .description .title {
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
-.feature .description .text {
+.benefit .description .text {
   color: #888;
   font-weight: 600;
   text-align: center;
+  padding: 0 2.5rem;
 }
-.feature .cta {
+.benefit .cta {
   margin-top: 3rem;
   color: #0075FF;
   font-weight: 600;
@@ -145,46 +150,89 @@ body {
   font-size: 1.1rem;
 }
 
-.sec-features {
+.sec-features, .sec-benefits {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.sec-features .intro {
+.sec-features .intro, .sec-benefits .intro, .sec-features .sec-benefits, .sec-benefits .sec-benefits {
   text-align: center;
 }
-.sec-features .intro h3 {
+.sec-features .intro h3, .sec-benefits .intro h3, .sec-features .sec-benefits h3, .sec-benefits .sec-benefits h3 {
   font-size: 2rem;
 }
-.sec-features .intro p {
-  font-size: 0.8rem;
+.sec-features .intro p, .sec-benefits .intro p, .sec-features .sec-benefits p, .sec-benefits .sec-benefits p {
+  font-size: 1rem;
   color: #888;
 }
-.sec-features .features {
+.sec-features .features, .sec-benefits .features {
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
-.sec-features .features .text {
+.sec-features .features .text, .sec-benefits .features .text {
   padding: 2rem 0;
-  max-width: 40%;
 }
-.sec-features .features .text .feature {
+.sec-features .features .text .feature, .sec-benefits .features .text .feature {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0.5rem;
 }
-.sec-features .features .text .feature .description {
+.sec-features .features .text .feature .description, .sec-benefits .features .text .feature .description {
   margin-left: 1rem;
+  max-width: 20rem;
 }
-.sec-features .features .text .feature .description .description-title {
+.sec-features .features .text .feature .description .description-title, .sec-benefits .features .text .feature .description .description-title {
   font-size: 1.25rem;
+  font-weight: 600;
 }
-.sec-features .features .text .feature .description .description-text {
+.sec-features .features .text .feature .description .description-text, .sec-benefits .features .text .feature .description .description-text {
   font-size: 1rem;
+}
+.sec-features .features .image img, .sec-benefits .features .image img {
+  max-width: 50rem;
+}
+
+.sec-benefits {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 3rem;
+  border-top: 1px solid #ddd;
+  padding: 4rem;
+}
+.sec-benefits .benefits-cards {
+  width: 100%;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.sec-kpis {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 3rem;
+  background-color: #0075FF;
+  color: white;
+  padding: 4rem;
+}
+.sec-kpis .kpi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec-kpis .kpi .number {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.sec-kpis .kpi .desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6666666667);
 }
 
 /*# sourceMappingURL=styles.css.map */

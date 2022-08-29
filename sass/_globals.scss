@@ -1,11 +1,10 @@
 @use "components";
 
-@mixin section-display {
+@mixin section-display($max-width) {
     width: 100%;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: auto;
     padding: 3rem;
-    
 }
 
 body {
@@ -30,7 +29,7 @@ body {
 .sec-home {
     display: flex;
     align-items: center;
-    @include section-display();
+    @include section-display(1200px);
     .home-cta {
         flex: 1;
         .cta-text {
@@ -51,14 +50,17 @@ body {
 }
 
 .sec-features {
-    @include section-display();
+    @include section-display(1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .intro {
         text-align: center;
         h3 {
             font-size: 2rem;
         }
         p {
-            font-size: 0.8rem;
+            font-size: 1rem;
             color: #888;
         }
     }
@@ -66,10 +68,9 @@ body {
         display: flex;
         gap: 1rem;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         .text {
             padding: 2rem 0;
-            max-width: 40%;
             .feature {
                 display: flex;
                 flex-direction: row;
@@ -77,8 +78,10 @@ body {
                 margin: 0.5rem;
                 .description {
                     margin-left: 1rem;
+                    max-width: 20rem;
                     .description-title {
                         font-size: 1.25rem;
+                        font-weight: 600;
                     }
                     .description-text {
                         font-size: 1rem;
@@ -89,9 +92,43 @@ body {
 
         .image{
             img {
-                
+                max-width: 50rem;
             }
         }
 
     }
+}
+
+.sec-benefits {
+    @include section-display(100%);
+    border-top: 1px solid #ddd;
+    @extend .intro, .sec-features;
+    padding: 4rem;
+    
+    .benefits-cards {
+        width: 100%;
+        padding: 0 2rem 2rem 2rem; 
+    }
+    
+}
+
+.sec-kpis {
+    @include section-display(100%);
+    background-color: components.$color-main;
+    color: white;
+    padding: 4rem;
+    .kpi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .number {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+        .desc {
+            font-size: 0.9rem;
+            color: #ffffffaa;
+        }
+    }
+
 }
