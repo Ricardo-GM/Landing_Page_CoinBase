@@ -9,6 +9,7 @@
 }
 
 $color-main: #0075FF;
+$color-footer: #F4F7FE;
 
 .btn-main {
     @include btn-base();
@@ -89,7 +90,7 @@ $color-main: #0075FF;
     display: flex;
     flex-direction: column;
 
-    .icon {
+    i {
         color: $color-main;
         font-size: 10rem;
         text-align: center;
@@ -125,7 +126,7 @@ $color-main: #0075FF;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .icon {
+    i {
         color: $color-main;
         padding: 0;
         font-size: 10rem;

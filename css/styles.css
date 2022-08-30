@@ -63,7 +63,7 @@
   display: flex;
   flex-direction: column;
 }
-.benefit .icon {
+.benefit i {
   color: #0075FF;
   font-size: 10rem;
   text-align: center;
@@ -95,7 +95,7 @@
   align-items: center;
   justify-content: center;
 }
-.icon-desc .icon {
+.icon-desc i {
   color: #0075FF;
   padding: 0;
   font-size: 10rem;
@@ -104,6 +104,10 @@
   margin-top: -2rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+html {
+  min-width: 500px;
 }
 
 body {
@@ -127,7 +131,6 @@ body {
 .sec-home {
   display: flex;
   align-items: center;
-  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 3rem;
@@ -149,9 +152,11 @@ body {
   font-weight: 600;
   font-size: 1.1rem;
 }
+.sec-home .home-cta .lead-magnet .input-col {
+  max-width: 300px;
+}
 
-.sec-features, .sec-benefits {
-  width: 100%;
+.sec-features {
   max-width: 1200px;
   margin: auto;
   padding: 3rem;
@@ -159,61 +164,71 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.sec-features .intro, .sec-benefits .intro, .sec-features .sec-benefits, .sec-benefits .sec-benefits {
+.sec-features .intro {
   text-align: center;
 }
-.sec-features .intro h3, .sec-benefits .intro h3, .sec-features .sec-benefits h3, .sec-benefits .sec-benefits h3 {
+.sec-features .intro h3 {
   font-size: 2rem;
 }
-.sec-features .intro p, .sec-benefits .intro p, .sec-features .sec-benefits p, .sec-benefits .sec-benefits p {
+.sec-features .intro p {
   font-size: 1rem;
   color: #888;
 }
-.sec-features .features, .sec-benefits .features {
+.sec-features .features {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: space-around;
 }
-.sec-features .features .text, .sec-benefits .features .text {
+.sec-features .features .text {
   padding: 2rem 0;
 }
-.sec-features .features .text .feature, .sec-benefits .features .text .feature {
+.sec-features .features .text .feature {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0.5rem;
 }
-.sec-features .features .text .feature .description, .sec-benefits .features .text .feature .description {
+.sec-features .features .text .feature .description {
   margin-left: 1rem;
   max-width: 20rem;
 }
-.sec-features .features .text .feature .description .description-title, .sec-benefits .features .text .feature .description .description-title {
+.sec-features .features .text .feature .description .description-title {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.sec-features .features .text .feature .description .description-text, .sec-benefits .features .text .feature .description .description-text {
+.sec-features .features .text .feature .description .description-text {
   font-size: 1rem;
 }
-.sec-features .features .image img, .sec-benefits .features .image img {
+.sec-features .features .image img {
   max-width: 50rem;
 }
 
 .sec-benefits {
-  width: 100%;
   max-width: 100%;
   margin: auto;
   padding: 3rem;
   border-top: 1px solid #ddd;
-  padding: 4rem;
+}
+.sec-benefits .intro {
+  text-align: center;
+}
+.sec-benefits .intro h3 {
+  font-size: 2rem;
+}
+.sec-benefits .intro p {
+  font-size: 1rem;
+  color: #888;
 }
 .sec-benefits .benefits-cards {
   width: 100%;
   padding: 0 2rem 2rem 2rem;
 }
+.sec-benefits .benefits-cards .benefit .description {
+  display: flex;
+}
 
 .sec-kpis {
-  width: 100%;
   max-width: 100%;
   margin: auto;
   padding: 3rem;
@@ -233,6 +248,91 @@ body {
 .sec-kpis .kpi .desc {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6666666667);
+}
+
+.sec-onboarding {
+  max-width: 100%;
+  margin: auto;
+  padding: 3rem;
+}
+.sec-onboarding .intro {
+  text-align: center;
+}
+.sec-onboarding .intro h3 {
+  font-size: 2rem;
+}
+.sec-onboarding .intro p {
+  font-size: 1rem;
+  color: #888;
+}
+.sec-onboarding .steps {
+  padding: 0 7rem 5rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-onboarding .steps .step-separator {
+  flex: 1;
+  border-top: 2px solid #ddd;
+  margin: 0 1rem;
+}
+
+.sec-footer-cta {
+  background-color: #F4F7FE;
+  padding: 5rem;
+  background-image: url(../assets/img/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+.sec-footer-cta .footer-cta {
+  width: 50%;
+}
+.sec-footer-cta .footer-cta .cta-title {
+  font-size: 2rem;
+}
+.sec-footer-cta .footer-cta .cta-description {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .nav .menu .main-menu {
+    display: none;
+  }
+  .sec-features .intro p {
+    font-size: 1.1rem;
+  }
+  .sec-benefits .intro p {
+    font-size: 1.1rem;
+  }
+  .sec-benefits .benefit-cards .benefit .description p {
+    font-size: 1.1rem;
+  }
+  .sec-benefits .benefit-cards .cta p {
+    font-size: 1.1rem;
+  }
+  .sec-kpis .kpi {
+    margin: 1rem 0;
+  }
+  .sec-kpis .kpi .desc {
+    font-size: 1.1rem;
+  }
+  .sec-onboarding .intro p {
+    font-size: 1.1rem;
+  }
+  .sec-onboarding .steps {
+    flex-direction: column;
+  }
+  .sec-onboarding .steps .icon-desc .title {
+    text-align: center;
+  }
+  .sec-footer-cta {
+    background-image: none;
+  }
+  .sec-footer-cta .footer-cta {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
